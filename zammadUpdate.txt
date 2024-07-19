@@ -1,0 +1,6 @@
+systemctl stop zammad
+cd /opt/zammad/contrib/backup/
+sudo zammad_backup.sh
+zammad run rails r "Rails.cache.clear"
+apt update
+apt upgrade
